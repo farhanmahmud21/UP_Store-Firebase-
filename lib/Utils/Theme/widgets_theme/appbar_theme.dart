@@ -21,6 +21,7 @@ class UAppBarTheme {
   );
 
   static const darkAppBarTheme = AppBarTheme(
+    scrolledUnderElevation: 0,
     elevation: 0,
     centerTitle: true,
     backgroundColor: Colors.transparent,

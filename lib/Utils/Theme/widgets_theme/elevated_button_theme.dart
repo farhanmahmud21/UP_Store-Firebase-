@@ -1,6 +1,6 @@
+import 'package:e_commerce/Utils/Constains/Colors.dart';
+import 'package:e_commerce/Utils/Constains/sizes.dart';
 import 'package:flutter/material.dart';
-import '../../constants/colors.dart';
-import '../../constants/sizes.dart';
 
 class UElevatedButtonTheme {
   UElevatedButtonTheme._();
