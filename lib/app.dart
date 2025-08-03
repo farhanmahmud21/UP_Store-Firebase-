@@ -1,4 +1,5 @@
 import 'package:e_commerce/Utils/Theme/theme.dart';
+import 'package:e_commerce/features/authentication/pages/Onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
       theme: UAppTheme.lightTheme,
       darkTheme: UAppTheme.darkTheme,
       themeMode: ThemeMode.system,
+      home: OnBoardingScreen(),
     );
   }
 }
