@@ -1,5 +1,7 @@
 class UTexts {
   UTexts._();
+
+  //OnBoarding Screen
   static String Animation1Title = 'Welcome to UP Store';
   static String Animation1SubTitle =
       'Your one-stop destination for effortless and enjoyable shopping';
@@ -9,4 +11,10 @@ class UTexts {
   static String Animation3Title = 'Fast & Reliable Delivery!';
   static String Animation3SubTitle =
       'Get your favorite items delivered to your doorstep, anytime, anywhere';
+
+  // Login Screen
+
+  static String loginTitle = 'Shop Smarter';
+  static String loginSubTitle =
+      'Log in to Access Exclusive Deals and Simplify Your Shopping Experience';
 }

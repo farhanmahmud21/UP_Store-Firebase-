@@ -2,15 +2,12 @@ import 'package:e_commerce/Utils/Constains/images.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
 import 'package:e_commerce/Utils/Constains/texts.dart';
 import 'package:e_commerce/Utils/helpers/device_helpers.dart';
-import 'package:e_commerce/common/buttons/elelvatedButton.dart';
 import 'package:e_commerce/features/authentication/controllers/OnBoarding/onboardingController.dart';
 import 'package:e_commerce/features/authentication/pages/Onboarding/Widgets/onboardingDotNavigation.dart';
 import 'package:e_commerce/features/authentication/pages/Onboarding/Widgets/onboardingNextButton.dart';
 import 'package:e_commerce/features/authentication/pages/Onboarding/Widgets/onboardingPAge.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -44,14 +41,24 @@ class OnBoardingScreen extends StatelessWidget {
                 ),
               ],
             ),
+
+            /// Dot Navigation
             OnBoardingDotNavigation(),
+
+            /// Next Button
             OnBoardingNextButton(),
+
+            /// Skip Button
             Positioned(
               top: UDeviceHelper.getAppBarHeight(),
               right: 0,
               child: TextButton(
                 onPressed: controller.skipPage,
-                child: Text("Skip"),
+                child: Obx(
+                  () => controller.currentIndex.value == 2
+                      ? SizedBox()
+                      : Text("Skip"),
+                ),
               ),
             ),
           ],

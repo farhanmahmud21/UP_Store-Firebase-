@@ -1,3 +1,4 @@
+import 'package:e_commerce/features/authentication/pages/Login/login.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
@@ -17,10 +18,17 @@ class Onboardingcontroller extends GetxController {
   }
 
   void nextPage() {
+    if (currentIndex.value == 2) {
+      Get.offAll(LoginScreen());
+    }
     currentIndex.value++;
     pageController.jumpToPage(currentIndex.value);
-    ;
   }
 
-  void skipPage() {}
+  void skipPage() {
+    if (currentIndex.value != 2) {
+      currentIndex.value = 2;
+      pageController.jumpToPage(2);
+    }
+  }
 }
