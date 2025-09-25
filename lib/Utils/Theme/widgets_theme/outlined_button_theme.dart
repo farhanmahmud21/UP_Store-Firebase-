@@ -9,7 +9,7 @@ class UOutlinedButtonTheme {
     style: OutlinedButton.styleFrom(
       elevation: 0,
       foregroundColor: UColors.dark,
-      side: const BorderSide(color: UColors.borderPrimary),
+      side: const BorderSide(color: UColors.dark),
       textStyle: const TextStyle(
         fontSize: 16,
         color: UColors.black,

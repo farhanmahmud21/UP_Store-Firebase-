@@ -1,10 +1,14 @@
-import 'package:e_commerce/Utils/Constains/images.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
-import 'package:e_commerce/Utils/Constains/texts.dart';
+import 'package:e_commerce/Utils/Theme/widgets_theme/outlined_button_theme.dart';
+import 'package:e_commerce/Utils/helpers/device_helpers.dart';
 import 'package:e_commerce/common/buttons/elelvatedButton.dart';
 import 'package:e_commerce/common/styles/padding.dart';
+import 'package:e_commerce/features/authentication/pages/Login/Widgets/loginDivider.dart';
+import 'package:e_commerce/features/authentication/pages/Login/Widgets/loginFooter.dart';
+import 'package:e_commerce/features/authentication/pages/Login/Widgets/loginForm.dart';
+import 'package:e_commerce/features/authentication/pages/Login/Widgets/loginHeader.dart';
+import 'package:e_commerce/features/authentication/pages/Login/Widgets/loginSocial.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -19,101 +23,38 @@ class LoginScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //Header
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  UTexts.loginTitle,
-                  style: Theme.of(context).textTheme.headlineMedium,
-                ),
-                Text(
-                  UTexts.loginSubTitle,
-                  style: Theme.of(context).textTheme.bodySmall,
-                ),
-              ],
-            ),
+            ULoginHeader(),
             SizedBox(height: USizes.spaceBtwSections),
             //Formm
-            Column(
-              children: [
-                TextFormField(
-                  decoration: InputDecoration(
-                    prefixIcon: Icon(Iconsax.direct_right_copy),
-                    hintText: 'E-mail',
-                  ),
-                ),
-                SizedBox(height: USizes.spaceBtwInputFields),
-                TextFormField(
-                  decoration: InputDecoration(
-                    prefixIcon: Icon(Iconsax.password_check),
-                    hintText: 'Password',
-                    suffixIcon: Icon(Iconsax.eye),
-                  ),
-                ),
-              ],
-            ),
+            ULoginForm(),
             SizedBox(height: USizes.spaceBtwSections * 00.5),
 
             // Footer
 
             //Remember Me
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Checkbox(value: true, onChanged: (value) {}),
-                    Text('Remember Me'),
-                  ],
-                ),
-                TextButton(onPressed: () {}, child: Text('Forgot Password')),
-              ],
-            ),
+            ULoginFooter(),
             SizedBox(height: USizes.spaceBtwSections * .5),
             // Buttons
             Column(
               children: [
                 UElelvatedbutton(onPressed: () {}, text: 'Sign in'),
                 SizedBox(height: USizes.spaceBtwItems * 0.5),
-                UElelvatedbutton(onPressed: () {}, text: 'Create Account'),
+                SizedBox(
+                  width: UDeviceHelper.getScreenWidth(context),
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    child: Text('Create Account'),
+                  ),
+                ),
               ],
             ),
             SizedBox(height: USizes.spaceBtwSections),
 
             //Or Sign in With
-            Row(
-              children: [
-                Expanded(child: Divider(indent: 60, endIndent: 5)),
-                Text('Or Sign in With'),
-                Expanded(child: Divider(indent: 5, endIndent: 60)),
-              ],
-            ),
+            ULoginDivider(title: 'Or Sign With'),
+            SizedBox(height: USizes.spaceBtwItems),
             // Google Icon
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: Image.asset(
-                        UImages.googleIcon,
-                        height: USizes.iconLg,
-                        width: USizes.iconLg,
-                      ),
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Image.asset(
-                        UImages.fbIcon,
-                        height: USizes.iconLg,
-                        width: USizes.iconLg,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+            ULoginSocialButton(),
           ],
         ),
       ),
