@@ -3,9 +3,9 @@ import 'package:e_commerce/Utils/Constains/sizes.dart';
 import 'package:e_commerce/Utils/Constains/texts.dart';
 import 'package:e_commerce/Utils/helpers/device_helpers.dart';
 import 'package:e_commerce/features/authentication/controllers/OnBoarding/onboardingController.dart';
-import 'package:e_commerce/features/authentication/pages/Onboarding/Widgets/onboardingDotNavigation.dart';
-import 'package:e_commerce/features/authentication/pages/Onboarding/Widgets/onboardingNextButton.dart';
-import 'package:e_commerce/features/authentication/pages/Onboarding/Widgets/onboardingPAge.dart';
+import 'package:e_commerce/features/authentication/screens/Onboarding/Widgets/onboardingDotNavigation.dart';
+import 'package:e_commerce/features/authentication/screens/Onboarding/Widgets/onboardingNextButton.dart';
+import 'package:e_commerce/features/authentication/screens/Onboarding/Widgets/onboardingPAge.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

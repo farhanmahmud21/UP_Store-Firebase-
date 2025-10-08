@@ -21,5 +21,11 @@ class UTexts {
   // SignUp Screen
 
   static String signupTitle = "Let's Get You Registered";
-  static String signuFooter = 'I agree to Privacy Policy and Terms of use';
+  static String signupFooter = 'I agree to ';
+
+  //Forget Screen
+
+  static String forgetTitle = 'Forget Password';
+  static String forgetSubtitle =
+      'No worries! Enter your registered email address,and we\'ll help you reset your password';
 }

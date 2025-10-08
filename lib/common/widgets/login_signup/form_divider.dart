@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class ULoginDivider extends StatelessWidget {
+class UFormDivider extends StatelessWidget {
   final String title;
-  const ULoginDivider({super.key, required this.title});
+  const UFormDivider({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,5 @@
 import 'package:e_commerce/Utils/Theme/theme.dart';
-import 'package:e_commerce/features/authentication/pages/Onboarding/onboarding.dart';
+import 'package:e_commerce/features/authentication/screens/Onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
