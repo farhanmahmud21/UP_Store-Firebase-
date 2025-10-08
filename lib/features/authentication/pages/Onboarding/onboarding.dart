@@ -46,7 +46,13 @@ class OnBoardingScreen extends StatelessWidget {
             OnBoardingDotNavigation(),
 
             /// Next Button
-            OnBoardingNextButton(),
+            Positioned(
+              bottom: UDeviceHelper.getBottomNavigationBarHeight(),
+              right: 0,
+              left: 0,
+
+              child: OnBoardingNextButton(),
+            ),
 
             /// Skip Button
             Positioned(

@@ -17,4 +17,9 @@ class UTexts {
   static String loginTitle = 'Shop Smarter';
   static String loginSubTitle =
       'Log in to Access Exclusive Deals and Simplify Your Shopping Experience';
+
+  // SignUp Screen
+
+  static String signupTitle = "Let's Get You Registered";
+  static String signuFooter = 'I agree to Privacy Policy and Terms of use';
 }

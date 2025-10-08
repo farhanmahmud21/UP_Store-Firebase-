@@ -1,14 +1,17 @@
 import 'package:e_commerce/Utils/Constains/sizes.dart';
 import 'package:e_commerce/Utils/Theme/widgets_theme/outlined_button_theme.dart';
 import 'package:e_commerce/Utils/helpers/device_helpers.dart';
-import 'package:e_commerce/common/buttons/elelvatedButton.dart';
+import 'package:e_commerce/common/widgets/buttons/elelvatedButton.dart';
 import 'package:e_commerce/common/styles/padding.dart';
+import 'package:e_commerce/common/widgets/buttons/social_butonss.dart';
 import 'package:e_commerce/features/authentication/pages/Login/Widgets/loginDivider.dart';
 import 'package:e_commerce/features/authentication/pages/Login/Widgets/loginFooter.dart';
 import 'package:e_commerce/features/authentication/pages/Login/Widgets/loginForm.dart';
 import 'package:e_commerce/features/authentication/pages/Login/Widgets/loginHeader.dart';
 import 'package:e_commerce/features/authentication/pages/Login/Widgets/loginSocial.dart';
+import 'package:e_commerce/features/authentication/pages/SignUp/signup.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -42,7 +45,9 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   width: UDeviceHelper.getScreenWidth(context),
                   child: OutlinedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => SignUpScreen());
+                    },
                     child: Text('Create Account'),
                   ),
                 ),
@@ -54,7 +59,7 @@ class LoginScreen extends StatelessWidget {
             ULoginDivider(title: 'Or Sign With'),
             SizedBox(height: USizes.spaceBtwItems),
             // Google Icon
-            ULoginSocialButton(),
+            USocialButtons(),
           ],
         ),
       ),
