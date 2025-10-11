@@ -8,4 +8,8 @@ class UImages {
   static const String OnboardingAnimation5 = 'assets/animations/Sale2.lottie';
   static const String googleIcon = 'assets/icons/google-icon.png';
   static const String fbIcon = 'assets/icons/fb-icon.png';
+
+  static const String resetMailSent = 'assets/images/sent_mail.svg';
+
+  static const String successImage = 'assets/images/success.png';
 }

@@ -28,4 +28,12 @@ class UTexts {
   static String forgetTitle = 'Forget Password';
   static String forgetSubtitle =
       'No worries! Enter your registered email address,and we\'ll help you reset your password';
+
+  static String resetPasswordTitle = 'Password Reset Email Sent';
+  static String resetPasswordSubtitle =
+      'We\'ve sent a password reset link to your email.Please check your inbox and follow the instructions to reset your pasword';
+
+  static String successScreenTitle = 'Your account successfully created';
+  static String successScreenSubtitle =
+      'Congratulations! Your account has been successfully created.You can now explore all the amazing features, start personalizing your experience, and enjoy seamless access to our services.Let\'s get started! ';
 }

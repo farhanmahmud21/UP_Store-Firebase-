@@ -1,9 +1,8 @@
 import 'package:e_commerce/Utils/Constains/images.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
-import 'package:e_commerce/Utils/helpers/device_helpers.dart';
+
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingPage extends StatelessWidget {
   final String animationName;

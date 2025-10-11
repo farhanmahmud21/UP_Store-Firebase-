@@ -2,7 +2,9 @@ import 'package:e_commerce/Utils/Constains/sizes.dart';
 import 'package:e_commerce/Utils/Constains/texts.dart';
 import 'package:e_commerce/common/buttons/elelvatedButton.dart';
 import 'package:e_commerce/common/styles/padding.dart';
+import 'package:e_commerce/features/authentication/screens/forgot_password/reset_email.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class UForgotPasswordScreen extends StatelessWidget {
@@ -23,7 +25,7 @@ class UForgotPasswordScreen extends StatelessWidget {
             ),
             Text(
               UTexts.forgetSubtitle,
-              style: Theme.of(context).textTheme.bodySmall,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
             SizedBox(height: USizes.spaceBtwSections),
 
@@ -34,7 +36,12 @@ class UForgotPasswordScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: USizes.spaceBtwSections),
-            UElelvatedbutton(onPressed: () {}, text: 'Submit'),
+            UElelvatedbutton(
+              onPressed: () {
+                Get.to(() => ResetEmailScreen());
+              },
+              text: 'Submit',
+            ),
           ],
         ),
       ),
