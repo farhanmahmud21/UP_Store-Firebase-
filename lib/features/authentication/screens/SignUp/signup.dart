@@ -1,15 +1,13 @@
-import 'package:e_commerce/Utils/Constains/Colors.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
 import 'package:e_commerce/Utils/Constains/texts.dart';
-import 'package:e_commerce/common/buttons/elelvatedButton.dart';
-import 'package:e_commerce/common/buttons/social_butonss.dart';
+
+import 'package:e_commerce/common/widgets/buttons/social_butonss.dart';
 
 import 'package:e_commerce/common/styles/padding.dart';
 import 'package:e_commerce/common/widgets/login_signup/form_divider.dart';
 import 'package:e_commerce/features/authentication/screens/SignUp/Widgets/signupForm.dart';
 
 import 'package:flutter/material.dart';
-import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -17,6 +15,7 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(automaticallyImplyLeading: true),
       body: Padding(
         padding: UPadding.screenPadding,
         child: Column(

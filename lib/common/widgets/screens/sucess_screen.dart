@@ -1,14 +1,25 @@
 import 'package:e_commerce/Utils/Constains/images.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
 import 'package:e_commerce/Utils/Constains/texts.dart';
-import 'package:e_commerce/common/buttons/elelvatedButton.dart';
+import 'package:e_commerce/common/widgets/buttons/elelvatedButton.dart';
+
 import 'package:e_commerce/common/styles/padding.dart';
+import 'package:e_commerce/features/authentication/screens/Login/login.dart';
 import 'package:flutter/material.dart';
 
-import 'package:get/get.dart';
-
 class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({super.key});
+  final String title;
+  final String subTitle;
+  final String image;
+  final VoidCallback onPressed;
+
+  const SuccessScreen({
+    super.key,
+    required this.title,
+    required this.subTitle,
+    required this.image,
+    required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +32,10 @@ class SuccessScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(UImages.successImage, fit: BoxFit.fill),
+              Image.asset(image, fit: BoxFit.fill),
               SizedBox(height: USizes.spaceBtwSections),
               Text(
-                UTexts.successScreenTitle,
+                title,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
@@ -33,18 +44,13 @@ class SuccessScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  UTexts.successScreenSubtitle,
+                  subTitle,
                   style: Theme.of(context).textTheme.bodySmall,
                   textAlign: TextAlign.center,
                 ),
               ),
               SizedBox(height: USizes.spaceBtwSections),
-              UElelvatedbutton(
-                onPressed: () {
-                  Get.to(() => SuccessScreen());
-                },
-                text: 'Continue',
-              ),
+              UElelvatedbutton(onPressed: onPressed, text: 'Continue'),
             ],
           ),
         ),

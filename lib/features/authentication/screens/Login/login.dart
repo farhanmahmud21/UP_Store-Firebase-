@@ -1,6 +1,6 @@
 import 'package:e_commerce/Utils/Constains/sizes.dart';
 
-import 'package:e_commerce/common/buttons/social_butonss.dart';
+import 'package:e_commerce/common/widgets/buttons/social_butonss.dart';
 
 import 'package:e_commerce/common/styles/padding.dart';
 import 'package:e_commerce/common/widgets/login_signup/form_divider.dart';

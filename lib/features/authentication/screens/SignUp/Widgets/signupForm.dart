@@ -1,8 +1,10 @@
-import 'package:e_commerce/Utils/Constains/Colors.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
-import 'package:e_commerce/Utils/Constains/texts.dart';
-import 'package:e_commerce/common/buttons/elelvatedButton.dart';
+
+import 'package:e_commerce/common/widgets/buttons/elelvatedButton.dart';
+import 'package:e_commerce/features/authentication/screens/SignUp/Widgets/privacyPolicyChecBox.dart';
+import 'package:e_commerce/features/authentication/screens/SignUp/verify_emaail.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class SignupForm extends StatelessWidget {
@@ -57,45 +59,14 @@ class SignupForm extends StatelessWidget {
           ),
         ),
         SizedBox(height: USizes.spaceBtwInputFields),
-        Row(
-          children: [
-            Row(
-              children: [
-                Checkbox(value: true, onChanged: (value) {}),
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: UTexts.signupFooter,
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
-                      TextSpan(
-                        text: 'Privacy Policy',
-                        style: TextStyle(
-                          color: UColors.primary,
-                          decoration: TextDecoration.underline,
-                        ),
-                      ),
-                      TextSpan(
-                        text: ' and ',
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
-                      TextSpan(
-                        text: 'Terms of use',
-                        style: TextStyle(
-                          color: UColors.primary,
-                          decoration: TextDecoration.underline,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
+        PrivacyPolicyCheckbox(),
         SizedBox(height: USizes.spaceBtwItems),
-        UElelvatedbutton(onPressed: () {}, text: 'Create Account'),
+        UElelvatedbutton(
+          onPressed: () {
+            Get.to(() => VerifyEmailScreen());
+          },
+          text: 'Create Account',
+        ),
       ],
     );
   }

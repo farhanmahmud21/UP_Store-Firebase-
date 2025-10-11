@@ -1,8 +1,8 @@
 import 'package:e_commerce/Utils/Constains/sizes.dart';
 import 'package:e_commerce/Utils/Constains/texts.dart';
-import 'package:e_commerce/common/buttons/elelvatedButton.dart';
+import 'package:e_commerce/common/widgets/buttons/elelvatedButton.dart';
 import 'package:e_commerce/common/styles/padding.dart';
-import 'package:e_commerce/features/authentication/screens/forgot_password/reset_email.dart';
+import 'package:e_commerce/features/authentication/screens/forgot_password/reset_password.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
@@ -13,6 +13,7 @@ class UForgotPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(automaticallyImplyLeading: true),
       body: Padding(
         padding: UPadding.screenPadding,
         child: Column(
@@ -25,7 +26,7 @@ class UForgotPasswordScreen extends StatelessWidget {
             ),
             Text(
               UTexts.forgetSubtitle,
-              style: Theme.of(context).textTheme.bodyMedium,
+              style: Theme.of(context).textTheme.bodySmall,
             ),
             SizedBox(height: USizes.spaceBtwSections),
 

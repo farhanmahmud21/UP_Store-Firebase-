@@ -1,6 +1,6 @@
 import 'package:e_commerce/Utils/Constains/sizes.dart';
 import 'package:e_commerce/Utils/helpers/device_helpers.dart';
-import 'package:e_commerce/common/buttons/elelvatedButton.dart';
+import 'package:e_commerce/common/widgets/buttons/elelvatedButton.dart';
 import 'package:e_commerce/features/authentication/screens/Login/Widgets/loginFooter.dart';
 import 'package:e_commerce/features/authentication/screens/SignUp/signup.dart';
 import 'package:flutter/material.dart';

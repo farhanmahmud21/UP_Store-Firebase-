@@ -28,10 +28,14 @@ class UTexts {
   static String forgetTitle = 'Forget Password';
   static String forgetSubtitle =
       'No worries! Enter your registered email address,and we\'ll help you reset your password';
-
+  // reset Screen
   static String resetPasswordTitle = 'Password Reset Email Sent';
   static String resetPasswordSubtitle =
-      'We\'ve sent a password reset link to your email.Please check your inbox and follow the instructions to reset your pasword';
+      'We\'ve sent a verification link to your email.Please check your inbox and follow the instructions to reset your pasword';
+  // veriffy Screen
+  static String verifyScreenTitle = 'Verify your email address !';
+  static String verifyScreenSubtitle =
+      'We\'ve sent a verification link to your email.Please check your inbox and click the link to verify your account';
 
   static String successScreenTitle = 'Your account successfully created';
   static String successScreenSubtitle =
