@@ -1,4 +1,5 @@
 import 'package:e_commerce/Utils/Constains/Colors.dart';
+import 'package:e_commerce/Utils/Theme/widgets_theme/text_theme.dart';
 import 'package:e_commerce/features/authentication/controllers/OnBoarding/navigationController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -42,7 +43,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
         ),
       ),
 
-      body: Text('!'),
+      body: Obx(() => controller.selectedPage[controller.uselected.value]),
     );
   }
 }
