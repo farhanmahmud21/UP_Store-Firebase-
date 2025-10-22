@@ -1,5 +1,5 @@
 import 'package:e_commerce/Utils/Constains/Colors.dart';
-import 'package:e_commerce/Utils/Theme/widgets_theme/text_theme.dart';
+
 import 'package:e_commerce/features/authentication/controllers/OnBoarding/navigationController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
