@@ -1,4 +1,3 @@
-import 'package:e_commerce/Utils/Constains/images.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
 
 import 'package:flutter/material.dart';

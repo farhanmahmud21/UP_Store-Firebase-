@@ -1,10 +1,9 @@
-import 'package:e_commerce/Utils/Constains/images.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
-import 'package:e_commerce/Utils/Constains/texts.dart';
+
 import 'package:e_commerce/common/widgets/buttons/elelvatedButton.dart';
 
 import 'package:e_commerce/common/styles/padding.dart';
-import 'package:e_commerce/features/authentication/screens/Login/login.dart';
+
 import 'package:flutter/material.dart';
 
 class SuccessScreen extends StatelessWidget {

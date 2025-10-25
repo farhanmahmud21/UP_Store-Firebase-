@@ -6,10 +6,13 @@ class UImages {
   static const String OnboardingAnimation3 = 'assets/animations/delivery.json';
   static const String OnboardingAnimation4 = 'assets/animations/Sale1.json';
   static const String OnboardingAnimation5 = 'assets/animations/Sale2.lottie';
-  static const String googleIcon = 'assets/icons/google-icon.png';
-  static const String fbIcon = 'assets/icons/fb-icon.png';
+  static const String googleIcon = 'assets/icons/social_media/google-icon.png';
+  static const String fbIcon = 'assets/icons/social_media/fb-icon.png';
 
   static const String resetMailSent = 'assets/images/sent_mail.svg';
 
   static const String successImage = 'assets/images/success.png';
+
+  static const String sportsCatagoryImage =
+      'assets/icons/categories/sports.png';
 }
