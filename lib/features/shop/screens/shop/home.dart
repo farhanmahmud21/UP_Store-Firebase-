@@ -1,94 +1,68 @@
-import 'package:e_commerce/Utils/Constains/Colors.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+
 import 'package:e_commerce/Utils/Constains/images.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
-import 'package:e_commerce/common/widgets/container/UcircularContainer.dart';
-import 'package:e_commerce/common/widgets/text_field/search_bar.dart';
-import 'package:e_commerce/features/shop/screens/shop/Widget/appbar.dart';
-
-import 'package:e_commerce/features/shop/screens/shop/Widget/uPrimaryHeaderContainer.dart';
+import 'package:e_commerce/features/shop/controllers/homeController.dart';
+import 'package:e_commerce/features/shop/screens/shop/Widget/Uheader.dart';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class HomeScreen extends StatelessWidget {
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final controller = Get.put(Homecontroller());
+  final page = PageController();
+  @override
   Widget build(BuildContext context) {
+    final banners = [
+      UImages.banner1,
+      UImages.banner2,
+      UImages.banner3,
+      UImages.banner4,
+    ];
     return Scaffold(
-      body: Stack(
+      body: Column(
         children: [
-          // Container(
-          //   height: UDeviceHelper.getScreenHeight(context) * .,
-          //   color: Colors.red,
-          // ),
-          SizedBox(
-            height: 360,
-            child: UPrimaryHeaderContainer(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  UCustomAppBar(),
-                  SizedBox(height: USizes.spaceBtwItems),
+          UHeader(),
+          SizedBox(height: USizes.spaceBtwSections * 0.3),
+          Padding(
+            padding: const EdgeInsets.all(14.0),
+            child: CarouselSlider(
+              carouselController: controller.carousel,
 
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30),
-                    child: Text(
-                      'Popular Categories',
-                      style: Theme.of(
-                        context,
-                      ).textTheme.headlineSmall!.copyWith(color: Colors.white),
-                    ),
-                  ),
-                  SizedBox(height: USizes.spaceBtwItems / 2),
+              items: banners
+                  .map(
+                    (img) => ClipRRect(
+                      borderRadius: BorderRadiusGeometry.circular(10),
 
-                  SizedBox(
-                    height: 100,
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 30),
-                      child: ListView.separated(
-                        separatorBuilder: (context, index) =>
-                            SizedBox(width: 10),
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 10,
-                        itemBuilder: (context, index) => Column(
-                          children: [
-                            UCircularContainer(
-                              color: UColors.white,
-                              height: 70,
-                              width: 70,
-                              child: Image.asset(
-                                UImages.sportsCatagoryImage,
-                                scale: 3,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 30,
-                              width: 60,
-                              child: Text(
-                                'Sports',
-                                style: Theme.of(context).textTheme.labelSmall!
-                                    .copyWith(color: Colors.white),
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                      child: Image.asset(img, fit: BoxFit.fill),
                     ),
-                  ),
-                ],
+                  )
+                  .toList(),
+              options: CarouselOptions(
+                viewportFraction: 1,
+                onPageChanged: (index, reason) => controller.updateDot(index),
               ),
             ),
           ),
 
-          Positioned(
-            top: 300,
-            right: USizes.spaceBtwSections,
-            left: USizes.spaceBtwSections,
-            child: USearchBar(),
+          Obx(
+            () => SmoothPageIndicator(
+              effect: ExpandingDotsEffect(dotHeight: 10),
+
+              controller: PageController(
+                initialPage: controller.currentIndex.value,
+              ),
+              count: banners.length,
+            ),
           ),
         ],
       ),

@@ -13,6 +13,11 @@ class UImages {
 
   static const String successImage = 'assets/images/success.png';
 
+  static const String banner1 = 'assets/images/banner/banner_1.jpg';
+  static const String banner2 = 'assets/images/banner/banner_2.jpg';
+  static const String banner3 = 'assets/images/banner/banner_3.jpg';
+  static const String banner4 = 'assets/images/banner/banner_4.jpg';
+
   static const String sportsCatagoryImage =
       'assets/icons/categories/sports.png';
 }

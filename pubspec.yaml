@@ -41,6 +41,7 @@ dependencies:
   iconsax_flutter: ^1.0.1
   flutter_svg: ^2.2.1
   flutter_custom_clippers: ^2.1.0
+  carousel_slider: ^5.1.1
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +73,7 @@ flutter:
     - assets/icons/social_media/
     - assets/images/
     - assets/logo/
+    - assets/images/banner/
     
   #   - images/a_dot_ham.jpeg
 

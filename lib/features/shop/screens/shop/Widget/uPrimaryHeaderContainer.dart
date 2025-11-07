@@ -14,7 +14,7 @@ class UPrimaryHeaderContainer extends StatelessWidget {
     return ClipPath(
       clipper: UCustomRoundedEdges(),
       child: Container(
-        height: UDeviceHelper.getScreenHeight(context) * 0.4,
+        height: 320,
         color: UColors.primary,
         child: Stack(
           children: [
