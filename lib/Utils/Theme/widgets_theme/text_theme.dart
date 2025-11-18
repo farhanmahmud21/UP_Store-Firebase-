@@ -56,7 +56,7 @@ class UTextTheme {
 
     labelLarge: const TextStyle().copyWith(
       fontSize: 12.0,
-      fontWeight: FontWeight.normal,
+      fontWeight: FontWeight.bold,
       color: UColors.dark,
     ),
     labelMedium: const TextStyle().copyWith(

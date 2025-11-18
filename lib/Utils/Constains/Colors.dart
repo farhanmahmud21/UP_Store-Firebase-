@@ -38,4 +38,8 @@ class UColors {
   static const Color grey = Color(0xFFE0E0E0);
   static const Color lightGrey = Color(0xFFF9F9F9);
   static const Color white = Color(0xFFFFFFFF);
+
+  // Product Card Color
+
+  static const pCardB = Color.fromARGB(44, 68, 137, 255);
 }
