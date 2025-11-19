@@ -10,7 +10,7 @@ class UCustomAppBar extends StatelessWidget {
     return AppBar(
       automaticallyImplyLeading: false,
       title: Padding(
-        padding: const EdgeInsets.only(left: 10.0),
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,

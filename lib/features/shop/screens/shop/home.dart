@@ -1,15 +1,13 @@
-import 'package:e_commerce/Utils/Constains/Colors.dart';
-
 import 'package:e_commerce/Utils/Constains/images.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
 import 'package:e_commerce/features/shop/controllers/homeController.dart';
 import 'package:e_commerce/features/shop/screens/shop/Widget/banner/homeBanner.dart';
 import 'package:e_commerce/features/shop/screens/shop/Widget/header/Uheader.dart';
-import 'package:e_commerce/features/shop/screens/shop/Widget/product/productCard.dart';
+
+import 'package:e_commerce/features/shop/screens/shop/Widget/product/verticalProductCard.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -35,10 +33,13 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             UHeader(),
             SizedBox(height: USizes.spaceBtwSections * 0.3),
-            uHomeBanner(controller: controller, banners: banners),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: uHomeBanner(controller: controller, banners: banners),
+            ),
             SizedBox(height: USizes.spaceBtwItems * 00.2),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
 
@@ -52,69 +53,21 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-
-            PCardVContainer(
-              color: UColors.pCardB,
-              height: 260,
-              width: 180,
-              child: Padding(
-                padding: const EdgeInsets.all(0.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          PCardVContainer(
-                            height: 160,
-                            width: 180,
-                            color: Colors.white,
-                            child: Image.asset(UImages.successImage),
-                          ),
-                          SizedBox(height: USizes.spaceBtwItems / 2),
-                          Text(
-                            'IPhone 11 64 GB',
-                            style: Theme.of(context).textTheme.labelLarge,
-                          ),
-                          Text(
-                            'Apple',
-                            style: Theme.of(context).textTheme.labelMedium,
-                          ),
-                          SizedBox(height: USizes.spaceBtwSections - 23),
-                        ],
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Text(
-                            '\$399- \$599',
-                            style: Theme.of(context).textTheme.bodyLarge,
-                          ),
-                        ),
-
-                        Container(
-                          height: 40,
-                          width: 40,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(200, 29, 29, 29),
-                            borderRadius: BorderRadius.only(
-                              bottomRight: Radius.circular(20),
-                              topLeft: Radius.circular(10),
-                            ),
-                          ),
-                          child: Icon(Iconsax.add_copy, color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ],
+            SizedBox(
+              height: MediaQuery.sizeOf(context).height / 3,
+              width: MediaQuery.sizeOf(context).width,
+              child: GridView.builder(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  mainAxisExtent: 260,
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
                 ),
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                itemCount: 6,
+                itemBuilder: (context, index) => VerticalProductCard(),
               ),
             ),
           ],

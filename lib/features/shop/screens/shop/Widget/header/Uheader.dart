@@ -29,7 +29,7 @@ class UHeader extends StatelessWidget {
                 SizedBox(height: USizes.spaceBtwItems),
 
                 Padding(
-                  padding: const EdgeInsets.only(left: 30),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Text(
                     'Popular Categories',
                     style: Theme.of(
@@ -42,7 +42,7 @@ class UHeader extends StatelessWidget {
                 SizedBox(
                   height: 100,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 30),
+                    padding: const EdgeInsets.only(left: 20, right: 10),
                     child: ListView.separated(
                       separatorBuilder: (context, index) => SizedBox(width: 10),
                       scrollDirection: Axis.horizontal,
