@@ -9,7 +9,6 @@ class OnBoardingDotNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Onboardingcontroller.instance;
-    ;
     return Positioned(
       bottom: UDeviceHelper.getBottomNavigationBarHeight() * 4,
       left: UDeviceHelper.getScreenWidth(context) / 3,

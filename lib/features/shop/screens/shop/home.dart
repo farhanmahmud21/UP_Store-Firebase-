@@ -3,8 +3,7 @@ import 'package:e_commerce/Utils/Constains/sizes.dart';
 import 'package:e_commerce/features/shop/controllers/homeController.dart';
 import 'package:e_commerce/features/shop/screens/shop/Widget/banner/homeBanner.dart';
 import 'package:e_commerce/features/shop/screens/shop/Widget/header/Uheader.dart';
-
-import 'package:e_commerce/features/shop/screens/shop/Widget/product/verticalProductCard.dart';
+import 'package:e_commerce/features/shop/screens/shop/Widget/product/popularProducts.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -54,21 +53,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(
-              height: MediaQuery.sizeOf(context).height / 3,
+              height: MediaQuery.sizeOf(context).height / 2,
               width: MediaQuery.sizeOf(context).width,
-              child: GridView.builder(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  mainAxisExtent: 260,
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                ),
-                shrinkWrap: true,
-                scrollDirection: Axis.vertical,
-                itemCount: 6,
-                itemBuilder: (context, index) => VerticalProductCard(),
-              ),
+              child: PopularProducts(),
             ),
           ],
         ),
