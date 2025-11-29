@@ -1,6 +1,7 @@
 import 'package:e_commerce/Utils/Constains/Colors.dart';
 import 'package:e_commerce/Utils/Constains/images.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
+import 'package:e_commerce/common/widgets/texts/brandName.dart';
 import 'package:e_commerce/features/shop/screens/shop/Widget/product/discountContainer.dart';
 import 'package:e_commerce/features/shop/screens/shop/Widget/product/productCard.dart';
 import 'package:flutter/material.dart';
@@ -63,8 +64,8 @@ class VerticalProductCard extends StatelessWidget {
                     'IPhone 11 64 GB',
                     style: Theme.of(context).textTheme.labelLarge,
                   ),
-                  Text('Apple', style: Theme.of(context).textTheme.labelMedium),
-                  SizedBox(height: USizes.spaceBtwSections - 23),
+                  brandNamewithVerified(brandName: 'Apple'),
+                  SizedBox(height: USizes.spaceBtwSections - 25),
                 ],
               ),
             ),

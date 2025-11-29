@@ -8,6 +8,7 @@ class PopularProducts extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: GridView.builder(
+        physics: NeverScrollableScrollPhysics(),
         padding: EdgeInsets.symmetric(horizontal: 20),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           mainAxisExtent: 260,

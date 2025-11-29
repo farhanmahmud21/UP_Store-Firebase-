@@ -52,11 +52,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            SizedBox(
-              height: MediaQuery.sizeOf(context).height / 2,
-              width: MediaQuery.sizeOf(context).width,
-              child: PopularProducts(),
-            ),
+
+            // SizedBox(
+            //   height: MediaQuery.sizeOf(context).height / 2,
+            //   width: MediaQuery.sizeOf(context).width,
+            //   child: PopularProducts(),
+            // ),
+            PopularProducts(),
           ],
         ),
       ),

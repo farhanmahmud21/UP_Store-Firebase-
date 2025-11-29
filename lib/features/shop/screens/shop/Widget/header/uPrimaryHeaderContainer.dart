@@ -4,17 +4,23 @@ import 'package:e_commerce/common/widgets/container/UcircularContainer.dart';
 import 'package:e_commerce/features/shop/screens/shop/Widget/header/UCustomRoundedEdges.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class UPrimaryHeaderContainer extends StatelessWidget {
   final Widget child;
-  const UPrimaryHeaderContainer({super.key, required this.child});
+  final double height;
+  const UPrimaryHeaderContainer({
+    super.key,
+    required this.child,
+    required this.height,
+  });
 
   @override
   Widget build(BuildContext context) {
     return ClipPath(
       clipper: UCustomRoundedEdges(),
       child: Container(
-        height: 340,
+        height: height,
         color: UColors.primary,
         child: Stack(
           children: [

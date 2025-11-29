@@ -21,6 +21,7 @@ class UHeader extends StatelessWidget {
         SizedBox(
           height: 340,
           child: UPrimaryHeaderContainer(
+            height: 200,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
