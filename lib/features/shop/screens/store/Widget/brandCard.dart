@@ -1,9 +1,9 @@
-import 'package:e_commerce/Utils/Constains/Colors.dart';
 import 'package:e_commerce/common/widgets/texts/brandName.dart';
 import 'package:flutter/material.dart';
 
 class brandCard extends StatelessWidget {
-  const brandCard({super.key});
+  final BoxBorder? borderColor;
+  const brandCard({super.key, this.borderColor});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class brandCard extends StatelessWidget {
       height: 70,
       width: 170,
       decoration: BoxDecoration(
-        border: BoxBorder.all(color: const Color.fromARGB(138, 39, 39, 39)),
+        border: borderColor,
         color: Colors.transparent,
         borderRadius: BorderRadius.circular(15),
       ),

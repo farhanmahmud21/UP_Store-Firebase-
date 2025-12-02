@@ -4,7 +4,6 @@ import 'package:e_commerce/common/widgets/container/UcircularContainer.dart';
 import 'package:e_commerce/features/shop/screens/shop/Widget/header/UCustomRoundedEdges.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class UPrimaryHeaderContainer extends StatelessWidget {
   final Widget child;

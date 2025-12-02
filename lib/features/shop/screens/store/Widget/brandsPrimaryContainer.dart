@@ -22,7 +22,11 @@ class BrandsPrimaryContainer extends StatelessWidget {
             separatorBuilder: (context, index) => SizedBox(width: 8),
             itemCount: 5,
             scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) => brandCard(),
+            itemBuilder: (context, index) => brandCard(
+              borderColor: Border.all(
+                color: const Color.fromARGB(138, 39, 39, 39),
+              ),
+            ),
           ),
         ),
       ],
