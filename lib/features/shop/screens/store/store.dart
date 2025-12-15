@@ -9,6 +9,7 @@ import 'package:e_commerce/features/shop/screens/store/Widget/brandCard.dart';
 import 'package:e_commerce/features/shop/screens/store/Widget/brandsPrimaryContainer.dart';
 import 'package:e_commerce/features/shop/screens/store/Widget/catagoryContainer.dart';
 import 'package:e_commerce/features/shop/screens/store/Widget/productCard.dart';
+import 'package:e_commerce/features/shop/screens/store/Widget/uGridStore.dart';
 
 import 'package:flutter/material.dart';
 
@@ -92,20 +93,7 @@ class StoreScreen extends StatelessWidget {
                           TextButton(onPressed: () {}, child: Text('View All')),
                         ],
                       ),
-                      GridView.builder(
-                        physics: NeverScrollableScrollPhysics(),
-
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          mainAxisExtent: 260,
-                          crossAxisCount: 2,
-                          crossAxisSpacing: 10,
-                          mainAxisSpacing: 10,
-                        ),
-                        shrinkWrap: true,
-                        scrollDirection: Axis.vertical,
-                        itemCount: 6,
-                        itemBuilder: (context, index) => VerticalProductCard(),
-                      ),
+                      UGridViewStore(verticalCard: VerticalProductCard()),
                     ],
                   ),
                 ),
