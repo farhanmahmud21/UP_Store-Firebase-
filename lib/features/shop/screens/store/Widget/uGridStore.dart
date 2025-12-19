@@ -1,4 +1,4 @@
-import 'package:e_commerce/features/shop/screens/shop/Widget/product/verticalProductCard.dart';
+import 'package:e_commerce/features/shop/screens/home/Widget/product/verticalProductCard.dart';
 import 'package:flutter/material.dart';
 
 class UGridViewStore extends StatelessWidget {

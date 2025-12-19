@@ -2,7 +2,7 @@ import 'package:e_commerce/Utils/Constains/Colors.dart';
 import 'package:e_commerce/common/styles/padding.dart';
 import 'package:e_commerce/features/authentication/controllers/OnBoarding/navigationController.dart';
 
-import 'package:e_commerce/features/shop/screens/shop/Widget/product/verticalProductCard.dart';
+import 'package:e_commerce/features/shop/screens/home/Widget/product/verticalProductCard.dart';
 import 'package:e_commerce/features/shop/screens/store/Widget/uGridStore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';

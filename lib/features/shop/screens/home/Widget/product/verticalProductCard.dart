@@ -1,9 +1,10 @@
 import 'package:e_commerce/Utils/Constains/Colors.dart';
 import 'package:e_commerce/Utils/Constains/images.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
+import 'package:e_commerce/common/widgets/container/Udiscount.dart';
 import 'package:e_commerce/common/widgets/texts/brandName.dart';
-import 'package:e_commerce/features/shop/screens/shop/Widget/product/discountContainer.dart';
-import 'package:e_commerce/features/shop/screens/shop/Widget/product/productCard.dart';
+import 'package:e_commerce/features/shop/screens/home/Widget/product/discountContainer.dart';
+import 'package:e_commerce/features/shop/screens/home/Widget/product/productCard.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
@@ -45,7 +46,7 @@ class VerticalProductCard extends StatelessWidget {
                         Positioned(
                           top: 15,
                           left: 10,
-                          child: DiscountContainer(),
+                          child: DiscountContainer(hg: 20, wg: 35, text: '49%'),
                         ),
 
                         Positioned(

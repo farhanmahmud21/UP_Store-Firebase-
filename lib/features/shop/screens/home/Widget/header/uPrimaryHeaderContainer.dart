@@ -1,7 +1,7 @@
 import 'package:e_commerce/Utils/Constains/Colors.dart';
 import 'package:e_commerce/Utils/helpers/device_helpers.dart';
 import 'package:e_commerce/common/widgets/container/UcircularContainer.dart';
-import 'package:e_commerce/features/shop/screens/shop/Widget/header/UCustomRoundedEdges.dart';
+import 'package:e_commerce/features/shop/screens/home/Widget/header/UCustomRoundedEdges.dart';
 
 import 'package:flutter/material.dart';
 

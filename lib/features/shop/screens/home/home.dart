@@ -1,9 +1,9 @@
 import 'package:e_commerce/Utils/Constains/images.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
 import 'package:e_commerce/features/shop/controllers/homeController.dart';
-import 'package:e_commerce/features/shop/screens/shop/Widget/banner/homeBanner.dart';
-import 'package:e_commerce/features/shop/screens/shop/Widget/header/Uheader.dart';
-import 'package:e_commerce/features/shop/screens/shop/Widget/product/popularProducts.dart';
+import 'package:e_commerce/features/shop/screens/home/Widget/banner/homeBanner.dart';
+import 'package:e_commerce/features/shop/screens/home/Widget/header/Uheader.dart';
+import 'package:e_commerce/features/shop/screens/home/Widget/product/popularProducts.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

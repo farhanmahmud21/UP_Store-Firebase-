@@ -3,7 +3,7 @@ import 'package:e_commerce/Utils/Constains/images.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
 
 import 'package:e_commerce/common/styles/padding.dart';
-import 'package:e_commerce/features/shop/screens/shop/Widget/product/verticalProductCard.dart';
+import 'package:e_commerce/features/shop/screens/home/Widget/product/verticalProductCard.dart';
 import 'package:e_commerce/features/shop/screens/store/Widget/UStorePrimaryHeader.dart';
 import 'package:e_commerce/features/shop/screens/store/Widget/brandCard.dart';
 import 'package:e_commerce/features/shop/screens/store/Widget/brandsPrimaryContainer.dart';

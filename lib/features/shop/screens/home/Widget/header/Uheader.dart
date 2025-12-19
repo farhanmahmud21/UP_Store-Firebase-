@@ -3,8 +3,8 @@ import 'package:e_commerce/Utils/Constains/images.dart';
 import 'package:e_commerce/Utils/Constains/sizes.dart';
 import 'package:e_commerce/common/widgets/container/UcircularContainer.dart';
 import 'package:e_commerce/common/widgets/text_field/search_bar.dart';
-import 'package:e_commerce/features/shop/screens/shop/Widget/header/appbar.dart';
-import 'package:e_commerce/features/shop/screens/shop/Widget/header/uPrimaryHeaderContainer.dart';
+import 'package:e_commerce/features/shop/screens/home/Widget/header/appbar.dart';
+import 'package:e_commerce/features/shop/screens/home/Widget/header/uPrimaryHeaderContainer.dart';
 import 'package:flutter/material.dart';
 
 class UHeader extends StatelessWidget {

@@ -4,7 +4,7 @@ import 'package:e_commerce/common/widgets/buttons/elelvatedButton.dart';
 import 'package:e_commerce/features/personalization/screens/profile/widget/headerText.dart';
 import 'package:e_commerce/features/personalization/screens/profile/widget/settings.dart';
 
-import 'package:e_commerce/features/shop/screens/shop/Widget/header/uPrimaryHeaderContainer.dart';
+import 'package:e_commerce/features/shop/screens/home/Widget/header/uPrimaryHeaderContainer.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 

@@ -20,4 +20,16 @@ class UImages {
 
   static const String sportsCatagoryImage =
       'assets/icons/categories/sports.png';
+
+  //Brands
+
+  static const String appleBrand = 'assets/brands/apple.jpg';
+
+  // Products
+  static const String apple = 'assets/products/product 3.png';
+  static const String iphone = 'assets/products/product 4.png';
+  static const String iphone_1 = 'assets/products/product 4 1.png';
+  static const String iphone_2 = 'assets/products/product 4 2.png';
+  static const String iphone_3 = 'assets/products/product 4 3.png';
+  static const String iphone_4 = 'assets/products/product 4 4.png';
 }
